@@ -6,11 +6,6 @@ st.title("Virtual FriendGPT")
 
 bot_image = Image.open('bot.png')
 person_image = Image.open('happy.png')
- 
-# ----- OPEN API KEY ENTRY 
-      
-st.session_state.api_key = st.text_input('Enter your openai api key', type = 'password')
-openai.api_key = st.session_state.api_key
 
 # ----- SESSION STATES
 
@@ -28,6 +23,11 @@ if "openai_model" not in st.session_state:
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
+ 
+# ----- OPEN API KEY ENTRY 
+      
+st.session_state.api_key = st.text_input('Enter your openai api key', type = 'password')
+openai.api_key = st.session_state.api_key
 
 # ----- SETUP EMPTY MESSAGE HISTORY
 
