@@ -6,7 +6,7 @@ st.title("Virtual FriendGPT")
 
 bot_image = Image.open('bot.png')
 person_image = Image.open('happy.png')
-
+st.image(bot_image, width = 100)
 # ----- SESSION STATES
 
 if 'api_key' not in st.session_state:
@@ -28,7 +28,7 @@ if "messages" not in st.session_state:
       
 st.session_state.api_key = st.text_input('Enter your openai api key', type = 'password')
 openai.api_key = st.session_state.api_key
-
+st.image(bot_image, width = 100)
 # ----- SETUP EMPTY MESSAGE HISTORY
 
 for message in st.session_state.messages:
@@ -36,7 +36,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # ----- SETUP A PROMPT AND RESPONSE
-
+st.image(bot_image, width = 100)
 if st.session_state.api_key != '':
     if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "user", "content": prompt})
