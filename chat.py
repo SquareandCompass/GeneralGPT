@@ -28,7 +28,7 @@ if "messages" not in st.session_state:
       
 st.session_state.api_key = st.text_input('Enter your openai api key', type = 'password')
 openai.api_key = st.session_state.api_key
-st.image(st.session_state.bot_image)
+
 # ----- SETUP EMPTY MESSAGE HISTORY
 
 for message in st.session_state.messages:
