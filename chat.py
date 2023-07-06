@@ -15,7 +15,11 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
  
 # ----- OPEN API KEY ENTRY 
-      
+with st.expander('Additional Information'):
+    st.write('This is a simple ChatBot build around the OpenAI API. \
+    It requires that you provide your own personal OpenAI API key. \
+    You can find or create your OpenAI API key here https://platform.openai.com/account/api-keys')
+    
 st.session_state.api_key = st.text_input('Enter your openai api key', type = 'password')
 openai.api_key = st.session_state.api_key
 
