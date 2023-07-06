@@ -4,12 +4,6 @@ from PIL import Image
 
 st.title("Virtual FriendGPT")
 
-bot_image = Image.open('bot.jpg')
-person_image = Image.open('happy.jpg')
-image = Image.open('bot.png')
-image2 = Image.open('happy.png')
-st.image(image, width = 100)
-st.image(image2, width = 105)
 # ----- SESSION STATES
 
 if 'api_key' not in st.session_state:
@@ -43,12 +37,12 @@ for message in st.session_state.messages:
 if st.session_state.api_key != '':
     if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user", avatar = image2):
+        with st.chat_message("user", avatar = '🧑‍💻'):
             st.markdown(prompt)
 
         # ----- GET RESPONSE FROM OPENAI AND STORE CHAT HISTORY
         try:
-            with st.chat_message("assistant", avatar = image):
+            with st.chat_message("assistant", avatar = '🤖'):
                 message_placeholder = st.empty()
                 full_response = ""
                 for response in openai.ChatCompletion.create(
