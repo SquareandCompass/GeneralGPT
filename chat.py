@@ -9,12 +9,6 @@ st.title("Virtual FriendGPT")
 if 'api_key' not in st.session_state:
     st.session_state.api_key = ''
     
-if 'bot_image' not in st.session_state:
-    st.session_state.bot_image = bot_image
-    
-if 'person_image' not in st.session_state:
-    st.session_state.person_image = person_image
-    
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
 
