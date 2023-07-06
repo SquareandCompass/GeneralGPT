@@ -7,7 +7,9 @@ st.title("Virtual FriendGPT")
 bot_image = Image.open('bot.jpg')
 person_image = Image.open('happy.jpg')
 image = Image.open('bot.png')
-st.image(image, width = 500)
+image2 = Image.open('happy.png')
+st.image(image, width = 100)
+st.image(image2, width = 105
 # ----- SESSION STATES
 
 if 'api_key' not in st.session_state:
