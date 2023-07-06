@@ -4,8 +4,8 @@ from PIL import Image
 
 st.title("Virtual FriendGPT")
 
-bot_image = Image.open('https://github.com/1901Analytics/GeneralGPT/blob/main/bot.png')
-person_image = Image.open('https://github.com/1901Analytics/GeneralGPT/blob/main/happy.png')
+bot_image = Image.open('bot.png')
+person_image = Image.open('happy.png')
  
 # ----- OPEN API KEY ENTRY 
       
