@@ -4,7 +4,7 @@ from PIL import Image
 
 st.title("Virtual FriendGPT")
 
-bot_image = Image.open('bot.png')
+bot_image = Image.open('bot.jpg')
 person_image = Image.open('happy.png')
 st.image(bot_image, width = 100)
 # ----- SESSION STATES
