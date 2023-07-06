@@ -9,7 +9,7 @@ person_image = Image.open('happy.jpg')
 image = Image.open('bot.png')
 image2 = Image.open('happy.png')
 st.image(image, width = 100)
-st.image(image2, width = 105
+st.image(image2, width = 105)
 # ----- SESSION STATES
 
 if 'api_key' not in st.session_state:
