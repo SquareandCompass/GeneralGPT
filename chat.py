@@ -6,6 +6,7 @@ st.title("Virtual FriendGPT")
 
 bot_image = Image.open('bot.png')
 person_image = Image.open('happy.png')
+st.image(bot_image)
  
 # ----- OPEN API KEY ENTRY 
       
