@@ -6,7 +6,6 @@ st.title("Virtual FriendGPT")
 
 bot_image = Image.open('bot.png')
 person_image = Image.open('happy.png')
-st.image(bot_image)
  
 # ----- OPEN API KEY ENTRY 
       
@@ -41,12 +40,12 @@ for message in st.session_state.messages:
 if st.session_state.api_key != '':
     if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user", avatar = person_image):
+        with st.chat_message("user", avatar = st.session_state.person_image):
             st.markdown(prompt)
 
         # ----- GET RESPONSE FROM OPENAI AND STORE CHAT HISTORY
         try:
-            with st.chat_message("assistant", avatar = bot_image):
+            with st.chat_message("assistant", avatar = st.session_state.bot_image):
                 message_placeholder = st.empty()
                 full_response = ""
                 for response in openai.ChatCompletion.create(
