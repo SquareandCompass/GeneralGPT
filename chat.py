@@ -43,12 +43,12 @@ for message in st.session_state.messages:
 if st.session_state.api_key != '':
     if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user", avatar = st.session_state.person_image):
+        with st.chat_message("user", avatar = image2):
             st.markdown(prompt)
 
         # ----- GET RESPONSE FROM OPENAI AND STORE CHAT HISTORY
         try:
-            with st.chat_message("assistant", avatar = st.session_state.bot_image):
+            with st.chat_message("assistant", avatar = image):
                 message_placeholder = st.empty()
                 full_response = ""
                 for response in openai.ChatCompletion.create(
