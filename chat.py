@@ -12,11 +12,11 @@ person_image = Image.open('happy.jpg')
 if 'api_key' not in st.session_state:
     st.session_state.api_key = ''
     
-if 'bot_image' not in st.session_state:
-    st.session_state.bot_image = bot_image
+# if 'bot_image' not in st.session_state:
+#     st.session_state.bot_image = bot_image
     
-if 'person_image' not in st.session_state:
-    st.session_state.person_image = person_image
+# if 'person_image' not in st.session_state:
+#     st.session_state.person_image = person_image
     
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
@@ -40,12 +40,12 @@ for message in st.session_state.messages:
 if st.session_state.api_key != '':
     if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user", avatar = st.session_state.person_image):
+        with st.chat_message("user", avatar = person_image):
             st.markdown(prompt)
 
         # ----- GET RESPONSE FROM OPENAI AND STORE CHAT HISTORY
         try:
-            with st.chat_message("assistant", avatar = st.session_state.bot_image):
+            with st.chat_message("assistant", avatar = bot_image):
                 message_placeholder = st.empty()
                 full_response = ""
                 for response in openai.ChatCompletion.create(
