@@ -4,8 +4,6 @@ from PIL import Image
 
 st.title("Virtual FriendGPT")
 
-#openai.api_key = st.secrets["OPENAI_API_KEY"]
-#openai.api_key = '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'
 bot_image = Image.open('bot.png')
 person_image = Image.open('happy.png')
  
