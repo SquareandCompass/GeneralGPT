@@ -1,6 +1,5 @@
 import openai
 import streamlit as st
-from PIL import image
 
 st.title("Virtual FriendGPT")
 
