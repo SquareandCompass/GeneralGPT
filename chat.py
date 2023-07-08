@@ -34,7 +34,7 @@ for message in st.session_state.messages:
 if st.session_state.api_key != '':
     if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user", avatar = 'https://github.com/1901Analytics/GeneralGPT/blob/main/happy.png'):
+        with st.chat_message("user"):
             st.markdown(prompt)
 
         # ----- GET RESPONSE FROM OPENAI AND STORE CHAT HISTORY
